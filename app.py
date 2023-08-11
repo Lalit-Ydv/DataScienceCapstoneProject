@@ -1,6 +1,7 @@
 #Importing Libraries
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Load the dataset
 car_details = pd.read_csv('D:/Edge/CAR DETAILS.csv')
@@ -258,20 +259,5 @@ results = pd.DataFrame({'Actual Selling Price': y_new_actual, 'Predicted Selling
 print(results)
 
 import pickle
-
-with open('C:/Users/dell/Downloads/app.pkl', 'wb') as f:
+with open('best_model.pkl', 'wb') as f:
     pickle.dump(data_to_save, f)
-
-with open('C:/Users/dell/Downloads/app.py', 'r') as file:
-    python_code = file.read()
-pickled_code = pickle.dumps(python_code)
-with open('C:/Users/dell/Downloads/app.pkl', 'wb') as file:
-    file.write(pickled_code)
-    
-with open('C:/Users/dell/Downloads/app.py', 'rb') as file:
-    python_code = file.read()
-
-pickled_code = pickle.dumps(python_code)
-
-with open('C:/Users/dell/Downloads/app.pkl', 'wb') as file:
-    file.write(pickled_code)
