@@ -14,7 +14,6 @@ car_details.info() # Check ratings info
 car_details.duplicated().sum() # Check Duplicates
 car_details.columns #show all columms
 car_details.isnull().sum() # Check the presence of missing values
-
 import datetime
 date_time = datetime.datetime.now()
 car_details['Age']=date_time.year - car_details['year']
