@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the dataset
-car_details = pd.read_csv('D:/Edge/CAR DETAILS.csv')
+car_details = pd.read_csv('C:/Users/dell/Desktop/capstone/car_details.csv')
 
 #Exploring data and Performing Data Cleaning and Pre-Processing
 car_details.head() #Showing the first five rows
