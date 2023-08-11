@@ -259,6 +259,10 @@ results = pd.DataFrame({'Actual Selling Price': y_new_actual, 'Predicted Selling
 print(results)
 
 import pickle
+
+with open('C:/Users/dell/Downloads/app.pkl', 'wb') as f:
+    pickle.dump(data_to_save, f)
+
 with open('C:/Users/dell/Downloads/app.py', 'r') as file:
     python_code = file.read()
 pickled_code = pickle.dumps(python_code)
