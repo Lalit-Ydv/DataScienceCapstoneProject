@@ -257,3 +257,18 @@ y_new_pred = model.predict(X_new)
 # Compare the actual and predicted values
 results = pd.DataFrame({'Actual Selling Price': y_new_actual, 'Predicted Selling Price': y_new_pred})
 print(results)
+
+import pickle
+with open('C:/Users/dell/Downloads/app.py', 'r') as file:
+    python_code = file.read()
+pickled_code = pickle.dumps(python_code)
+with open('C:/Users/dell/Downloads/app.pkl', 'wb') as file:
+    file.write(pickled_code)
+    
+with open('C:/Users/dell/Downloads/app.py', 'rb') as file:
+    python_code = file.read()
+
+pickled_code = pickle.dumps(python_code)
+
+with open('C:/Users/dell/Downloads/app.pkl', 'wb') as file:
+    file.write(pickled_code)
