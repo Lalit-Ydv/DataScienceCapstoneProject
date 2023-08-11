@@ -1,7 +1,6 @@
 #Importing Libraries
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 
 # Load the dataset
 car_details = pd.read_csv('D:/Edge/CAR DETAILS.csv')
