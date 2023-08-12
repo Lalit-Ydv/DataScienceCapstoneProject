@@ -273,6 +273,10 @@ def filter_cars_by_company(selected_company, car_details):
     return filtered_cars
 
 import streamlit as st
+import matplotlib
+matplotlib.use("Agg")  # Use non-interactive backend
+import matplotlib.pyplot as plt
+import pandas as pd
 # Create the web app
 def main():
     # Set the title and description
