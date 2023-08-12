@@ -2,6 +2,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+%matplotlib inline
 
 # Load the dataset
 car_details = pd.read_csv('C:/Users/dell/Desktop/capstone/car_details.csv')
