@@ -6,7 +6,7 @@ with open('C:/Users/dell/Downloads/app.py', 'rb') as file:
 
 pickled_code = pickle.dumps(python_code)
 
-with open(C:/Users/dell/Downloads/app.pkl, 'wb') as file:
+with open('C:/Users/dell/Downloads/app'.pkl, 'wb') as file:
     file.write(pickled_code)
 
 def main():
