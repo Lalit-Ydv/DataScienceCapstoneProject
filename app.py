@@ -5,8 +5,6 @@ model=pickle.load(open('best_model.pkl','rb'))
 
 def main():
     st.title('Car Price Prediction Using ML')
-    img='car.png'
-    st.image(img)
     st.subheader('Car Price Predictor')
     st.info('''We need some information to predict Car price''')
 
