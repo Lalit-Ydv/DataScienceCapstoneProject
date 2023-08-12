@@ -1,13 +1,7 @@
 import streamlit as st
 import pandas as pd
-
 import pickle
-with open('best_model.pkl', 'wb') as f:
-    pickle.dump(data_to_save, f)
-
-# Load the pipeline
-with open('best_model.pkl', 'rb') as file:
-    pipeline = pickle.load(file)
+model=pickle.load(open('best_model.pkl','rb'))
 
 def main():
     st.title('Car Price Prediction Using ML')
