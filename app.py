@@ -272,6 +272,7 @@ def filter_cars_by_company(selected_company, car_details):
     filtered_cars = sorted_df[sorted_df['company'] == selected_company]['name'].unique()
     return filtered_cars
 
+import streamlit as st
 # Create the web app
 def main():
     # Set the title and description
