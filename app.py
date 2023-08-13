@@ -10,7 +10,7 @@ def predict_prices(car_detalis):
     car_details['model']=car_details['name'].apply(lambda x:x.split(' ')[1])
     car_details['No_of_total_years']=2023-car_details['year']
     car_details.drop(['name','year'],axis=1,inplace=True) 
-    with open(r'pipeline.pkl', 'rb') as file:
+    with open(r'best_model.pkl', 'rb') as file:
         pipeline = pickle.load(file)
 
 
