@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import BaggingClassifier
 import pickle
 
 # Function to create a simple ML pipeline and perform predictions
