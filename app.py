@@ -4,7 +4,6 @@ import pickle
 
 import joblib
 loaded_model = joblib.load('bagging.pkl')
-loaded_model=pickle.load(open('bagging.pkl','rb'))
 
 def main():
     st.title('Car Price Prediction Using ML')
