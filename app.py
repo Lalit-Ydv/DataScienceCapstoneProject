@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import pickle
 
+import joblib
+loaded_model = joblib.load('bagging.pkl')
 loaded_model=pickle.load(open('bagging.pkl','rb'))
 
 def main():
