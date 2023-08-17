@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-model=pickle.load(open('bagging.pkl','rb'))
+loaded_model=pickle.load(open('bagging.pkl','rb'))
 
 def main():
     st.title('Car Price Prediction Using ML')
