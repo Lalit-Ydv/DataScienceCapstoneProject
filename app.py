@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-import joblib
-loaded_model = joblib.load('bagging.pkl')
+# import joblib
+# loaded_model = joblib.load('bagging.pkl')
 
 def main():
     st.title('Car Price Prediction Using ML')
