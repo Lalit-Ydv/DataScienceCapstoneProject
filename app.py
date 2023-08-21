@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import pickle
+# import pickle
 
 # import joblib
 # loaded_model = joblib.load('bagging.pkl')
@@ -11,14 +11,14 @@ def main():
     st.info('''We need some information to predict Car price''')
 
 
-    df=pd.read_csv('C:/Users/dell/Desktop/capstone/CAR DETAILS.csv')
-    cars=(df['name'].unique())
-    transmission=(df['transmission'].unique())
-    seller=(df['seller_type'].unique())
-    owner=(df['owner'].unique())
-    fuel=(df['fuel'].unique())
+    car_details=pd.read_csv('C:/Users/dell/Desktop/capstone/CAR DETAILS.csv')
+    cars=(car_details['name'].unique())
+    transmission=(car_details['transmission'].unique())
+    seller=(car_details['seller_type'].unique())
+    owner=(car_details['owner'].unique())
+    fuel=(car_details['fuel'].unique())
 
-    p2=st.slider('Model Year',2005,2020,2005)
+    p2=st.slider('Year',2005,2020,2005)
 
     p3=st.selectbox('Seller Type',seller)
     if p3=='Individual':
@@ -58,17 +58,17 @@ def main():
     elif p6=='Electric':
         p6=2
 
-    p7=(st.slider('KM Driven',500,10000000,500))/100000
+    p7=(st.slider('KM Driven'))
 
     x=pd.DataFrame({'year':[p2],'fuel':[p6],'seller_type':[p3],
-                    'transmission':[p5],'owner':[p4],'km_driven_in_lacks':[p7]})
+                    'transmission':[p5],'owner':[p4],'km_driven':[p7]})
     ok=st.button('Predict Car Price')
     if ok:
         prediction=model.predict(x)
         st.success('Predicted Car Price:'+str( prediction*100000) +'Rupees')
         st.caption('Thanks for using!')
         st.balloons()
-        st.write('Created by Lalit Yadav.')
+        st.write('Created by Lalit Yadav')
 
 if __name__=='__main__':
     main()
