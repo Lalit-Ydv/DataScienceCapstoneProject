@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
-# import pickle
+import pickle
 
-# import joblib
-# loaded_model = joblib.load('bagging.pkl')
+import joblib
+loaded_model = joblib.load('bagging.pkl')
 
 def main():
     st.title('Car Price Prediction Using ML')
@@ -60,7 +60,7 @@ def main():
 
     p7=(st.slider('KM Driven'))
 
-    x=pd.DataFrame({'year':[p2],'fuel':[p6],'seller_type':[p3],
+    x=pd.DataFrame({'age':[p2],'fuel':[p6],'seller_type':[p3],
                     'transmission':[p5],'owner':[p4],'km_driven':[p7]})
     ok=st.button('Predict Car Price')
     if ok:
